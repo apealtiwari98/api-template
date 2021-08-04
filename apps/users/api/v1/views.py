@@ -30,6 +30,9 @@ class UserViewSet(CreateListUpdateDestroyViewSet):
     search_fields = ['full_name', 'email', 'phone_number']
     filter_fields = ['is_staff', ]
 
+    def get_queryset(self, *args, **kwargs):
+        return super().get_queryset(*args, **kwargs).filter(id=self.request.user.id)
+
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
         instance.is_active = False
