@@ -2,7 +2,7 @@
 
 ##### Pull the code from the server.
 ```sh
-django-admin startproject --template https://github.com/Bindeep/api-template/archive/master.zip <project_name>
+django-admin startproject --template https://github.com/apealtiwari98/api-template/archive/master.zip <project_name>
 ```
 
 ##### Create virtual Environment
